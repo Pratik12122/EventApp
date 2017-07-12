@@ -1,0 +1,38 @@
+<div class="card card-block" style="width: 60rem;">
+        <h4 class="card-title">Create Event</h4>
+        
+        <div class="form-group">
+        <input type="text"
+        class="form-control" #id
+        placeholder="Event Id">
+        </div>
+
+        <div class="form-group">
+        <input type="text"
+        class="form-control" #eventname
+        placeholder="Enter the Event name">
+        </div>
+
+        <div class="form-group">
+        <input type="text"
+        class="form-control" #desc
+        placeholder="Event Description">
+        </div>
+
+        <div class="form-group">
+        <input type="text"
+        class="form-control" #location
+        placeholder="Event location">
+        </div>
+
+        <div class="form-group">
+        <input type="text"
+        class="form-control" #speaker
+        placeholder="speaker">
+        </div>
+
+        <button type="button"
+        (click)="createEvent(id.value,eventname.value,desc.value,location.value,speaker.value)"
+        class="btn btn-primary">Create
+        </button>
+</div>

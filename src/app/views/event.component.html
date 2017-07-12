@@ -1,0 +1,27 @@
+<div class="card card-inverse" style="width: 60rem;background-color: #333; border-color: #333;">
+    <div class="card-block">
+    <h3 class="card-title">{{event.name}}</h3>
+    <p class="card-text">Location: {{event.location}}</p>
+    <a href="#"  (click)="showSelectedEventdeatials(event)"
+         class="btn btn-primary">Details</a>
+  </div>
+</div>
+  
+<div *ngIf="selectedEvent" style="width: 60rem;" >
+  <div *ngIf="selectedEvent.hide">
+    <div class="card text-center">
+    <div class="card-header">
+        Featured
+    </div>
+    <div class="card-block">
+        <h4 class="card-title">{{selectedEvent.name}}</h4>
+        <p class="card-text">Location: [(ngModel)]={{selectedEvent.location}}</p>
+        <p class="card-text">{{selectedEvent.description}}</p>
+        <p class="card-text">-{{selectedEvent.speaker}}</p>
+    </div>
+    <div class="card-footer text-muted">
+        {{selectedEvent.date}}
+    </div>
+</div>
+</div>
+  
