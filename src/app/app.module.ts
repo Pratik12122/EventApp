@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule }   from '@angular/forms'
 import { AppComponent } from './app.component';
 import { EventListComponent } from './components/EventList.component';
 import { EventComponent } from './components/event.component';
@@ -16,7 +16,8 @@ EventFormComponent
     EventFormComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

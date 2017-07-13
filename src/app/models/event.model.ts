@@ -14,7 +14,7 @@ export class Event{
         this.description=description;
         this.location=location;
         this.dateTime=new Date();
-        this.speaker= speaker;
+        this.speaker=speaker;
         this.hide=true;
     }
 }
