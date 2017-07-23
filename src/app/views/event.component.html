@@ -2,8 +2,13 @@
     <div class="card-block">
     <h3 class="card-title">{{event.name}}</h3>
     <p class="card-text">Location: {{event.location}}</p>
-    <a href="#"  (click)="showSelectedEventdeatials(event)"
-         class="btn btn-primary">Details</a>
+    <input type="button" class="btn btn-primary btn-sm" 
+        value="Details" (click)="showSelectedEventdeatials(event)" 
+    />
+    <button type="button" class="btn btn-danger btn-sm" 
+    (click)="delete(event)">
+          <span class="glyphicon glyphicon-remove"></span> Remove Event
+    </button>
   </div>
 </div>
   
@@ -15,9 +20,9 @@
     </div>
     <div class="card-block">
          <h4 class="card-title">
-            <div><input [(ngModel)]= "selectedEvent.name"/></div>
+            <div>{{selectedEvent.description}}</div>
          </h4>
-        <div><input [(ngModel)]= "selectedEvent.location"/></div>
+        <div></div>
         <p class="card-text">{{selectedEvent.description}}</p>
     </div>
     <div class="card-footer text-muted">
